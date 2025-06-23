@@ -516,6 +516,18 @@ min-width: 200px;        /* increase min-width from 160px */
   width: 100%;
 }
 
+.demo-image-wrapper {
+  width: 100%;
+  max-width: 700px;  /* adjust max size */
+  margin: 1rem auto 0; /* top margin, center horizontally */
+}
+
+.demo-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
 
 
 
