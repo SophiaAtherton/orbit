@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Orbit Feed</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="page-container">
+    <!-- Header -->
+    <div class="header">
+      <div class="top-nav">
+        <div class="logo">
+          <img src="assets/orbit-lockup.png" alt="Logo" />
+        </div>
+        <button class="menu-btn">
+          <img src="assets/menu.png" alt="Menu" />
+        </button>
+      </div>
+
+      <img src="assets/hero-background.png" alt="Hero background" class="hero-bg" />
+      <div class="hero-text">Connection is in<br />your hands</div>
+
+      <div class="search-bar">
+        <input type="text" placeholder="search" />
+        <button class="filter-btn">
+          <img src="assets/basil--settings-adjust-outline.png" alt="Filter" class="filter-icon" />
+        </button>
+      </div>
+    </div>
+
+    <!-- Background wrapper -->
+    <div class="background-wrapper">
+      <div class="background-image"></div>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab active" data-tab="explore">Explore</button>
+        <button class="tab" data-tab="path">Your path</button>
+      </div>
+
+      <!-- Feed: Explore -->
+      <div class="feed" id="explore">
+        <!-- Trending -->
+        <div class="section-title">
+          <img src="assets/heroicons--fire-20-solid.png" alt="" class="section-icon" />
+          Trending
+        </div>
+        <div class="card-scroll" id="trending-section"></div>
+
+        <!-- Coming up soon -->
+        <div class="section-title">
+          <img src="assets/heroicons--calendar-days-16-solid.png" alt="" class="section-icon" />
+          Coming up soon
+        </div>
+        <div class="card-scroll" id="coming-section"></div>
+
+        <!-- Monthly moments -->
+        <div class="section-title">
+          <img src="assets/heroicons-outline--ticket.png" alt="" class="section-icon" />
+          Monthly moments
+        </div>
+        <div class="card-scroll" id="monthly-section"></div>
+      </div>
+
+      <!-- Feed: Your path -->
+      <div class="feed hidden" id="path">
+        <!-- What is your path -->
+        <div class="path-header">
+          <div class="paper-note">
+            <img src="assets/paper-note.png" alt="Paper background" class="paper-image" />
+            <div class="paper-content">
+              <h2 class="path-title">what is your path?</h2>
+              <p class="path-desc">
+                It’s a personally curated path and a guide for your first 4 steps, to help you achieve your goals and integrate you into the community
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step Flow -->
+        <div class="path-flow">
+          <img src="assets/start-arrow.png" alt="Start here" class="start-arrow" />
+          <span class="start-label">start here</span>
+          <div class="steps">
+            <img src="assets/Property-1-1.png" alt="Step 1" />
+            <img src="assets/Property-1-2.png" alt="Step 2" />
+            <img src="assets/Property-1-3.png" alt="Step 3" />
+            <img src="assets/Property-1-4.png" alt="Step 4" />
+          </div>
+        </div>
+
+        <!-- Carousel -->
+<div class="carousel-container">
+  <div class="carousel-text">
+    <h2><span class="highlight">Get to know your cohort</span></h2>
+    <p>A casual way to ease in</p>
+  </div>
+
+  <div class="carousel-image-wrapper">
+    <!-- Optional blurred card on the left -->
+    <div class="card blurred-left">
+      <img src="assets/wine-creative.png" alt="Wine & creative unblocking" class="card-img" />
+    </div>
+
+    <!-- Main featured Orbit card -->
+    <div class="card main-card">
+      <div class="card-header">
+        <img src="assets/cohort.png" alt="Get to know your cohort" />
+      </div>
+      <div class="content">
+        <div class="badge" style="background:#a0dcff; border-color: #74c3e6;">
+          <img src="assets/group.png" alt="" class="icon" />
+          casual mingling
+        </div>
+        <div class="meta">
+          <span>
+            <img src="assets/heroicons--calendar-days-16-solid-green.png" class="icon" />
+            17/20
+          </span>
+          <span>
+            <img src="assets/heroicons-outline--clock-green.png" class="icon" />
+            6:30pm
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional blurred card on the right -->
+    <div class="card blurred">
+      <img src="assets/stem.png" alt="Women in STEM" class="card-img" />
+    </div>
+  </div>
+</div>
+
+
+
+      </div>
+    </div> <!-- background-wrapper -->
+  </div> <!-- page-container -->
+
+  <script src="script.js"></script>
+</body>
+</html>

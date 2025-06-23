@@ -1,0 +1,225 @@
+[
+  {
+    "title": "Wine & creative unblocking",
+    "image": "assets/drawing.jpg",
+    "category": "skill building",
+    "borderColor": "#7ebf68",
+    "icon": "fa-solid--tools.png",
+    "tags": ["creative", "skill"],
+    "section": "trending",
+    "date":"July 2"
+  },
+
+  {
+    "title": "Get to know your cohort",
+    "image": "assets/appetisers.jpg",
+    "category": "casual mingling",
+    "borderColor": "#F3E194",
+    "icon": "group.png",
+    "tags": ["social", "intro"],
+    "section": "trending"
+  },
+
+  {
+  "title": "Women in STEM Collective",
+  "image": "assets/connect.jpg",
+  "category": "career connect",
+  "borderColor": "#bf91e6",
+  "icon": "suitcase.png",
+  "tags": ["career", "STEM", "network"],
+  "section": "trending"
+},
+
+  {
+    "title": "Unlocking the job market",
+    "image": "assets/group-chat.jpg",
+    "category": "talks & panels",
+    "borderColor": "#e68787",
+    "icon": "communication-icon.png",
+    "tags": ["career", "job"],
+    "section": "trending"
+  },
+
+  {
+  "title": "Women in STEM Collective",
+  "image": "assets/connect.jpg",
+  "category": "career connect",
+  "borderColor": "#bf91e6",
+  "icon": "suitcase.png",
+  "tags": ["career", "STEM", "network"],
+  "section": "trending"
+},
+
+  {
+    "title": "Wine & creative unblocking",
+    "image": "assets/drawing.jpg",
+    "category": "skill building",
+    "borderColor": "#7ebf68",
+    "icon": "fa-solid--tools.png",
+    "tags": ["creative", "skill"],
+    "section": "trending",
+    "date":"July 2"
+  },
+  {
+    "title": "Get to know your cohort",
+    "image": "assets/appetisers.jpg",
+    "category": "casual mingling",
+    "borderColor": "#F3E194",
+    "icon": "group.png",
+    "tags": ["social", "intro"],
+    "section": "trending"
+  },
+
+
+
+
+
+
+  {
+  "title": "Skill Swap and Social ",
+  "image": "assets/coffee.jpg",
+  "category": "skill building",
+  "borderColor": "#7ebf68",
+  "icon": "fa-solid--tools.png",
+  "tags": ["communication", "confidence"],
+  "section": "coming"
+},
+
+{
+  "title": "Speed Meet and Greet",
+  "image": "assets/group-outside.jpg",
+  "category": "casual mingling",
+ "borderColor": "#F3E194",
+  "icon": "group.png",
+  "tags": ["intro", "social", "chat"],
+  "section": "coming"
+},
+
+  {
+    "title": "Unlocking the job market",
+    "image": "assets/panel.jpg",
+    "category": "talks & panels",
+    "borderColor": "#e68787",
+    "icon": "communication-icon.png",
+    "tags": ["career", "job"],
+    "section": "coming"
+  },
+
+{
+  "title": "Career paths and Coffee",
+  "image": "assets/outdoor-coffee-2.jpg",
+  "category": "career connect",
+  "borderColor": "#bf91e6",
+  "icon": "suitcase.png",
+  "tags": ["career", "job", "linkedin"],
+  "section": "coming"
+},
+
+{
+  "title": "Speed Meet and Greet",
+  "image": "assets/group-outside.jpg",
+  "category": "casual mingling",
+ "borderColor": "#F3E194",
+  "icon": "group.png",
+  "tags": ["intro", "social", "chat"],
+  "section": "coming"
+},
+
+  {
+  "title": "Skill Swap and Social ",
+  "image": "assets/coffee.jpg",
+  "category": "skill building",
+  "borderColor": "#7ebf68",
+  "icon": "fa-solid--tools.png",
+  "tags": ["communication", "confidence"],
+  "section": "coming"
+},
+
+{
+  "title": "Career paths and Coffee",
+  "image": "assets/outdoor-coffee-2.jpg",
+  "category": "career connect",
+  "borderColor": "#bf91e6",
+  "icon": "suitcase.png",
+  "tags": ["career", "job", "linkedin"],
+  "section": "coming"
+},
+
+
+
+
+
+
+{
+  "title": "Future Forward Gala Celebration",
+  "image": "assets/gala.jpg",
+  "category": "Special event",
+  "borderColor": "#7DA8C0",
+  "icon": "heroicons--ticket-solid.png",
+  "tags": ["career", "job", "linkedin"],
+  "section": "monthly"
+},
+
+{
+  "title": "Beca's CEO talks, How to Level Up ",
+  "image": "assets/talk.jpg",
+  "category": "Special event",
+  "borderColor": "#7DA8C0",
+  "icon": "heroicons--ticket-solid.png",
+  "tags": ["career", "job", "linkedin"],
+  "section": "monthly"
+},
+
+{
+  "title": "Networking Evening in Noir",
+  "image": "assets/networking.jpg",
+  "category": "Special event",
+  "borderColor": "#7DA8C0",
+  "icon": "heroicons--ticket-solid.png",
+  "tags": ["career", "job", "linkedin"],
+  "section": "monthly"
+},
+
+{
+  "title": "Creative Collective Noon",
+  "image": "assets/sky-high.jpg",
+  "category": "Special event",
+  "borderColor": "#7DA8C0",
+  "icon": "heroicons--ticket-solid.png",
+  "tags": ["career", "job", "linkedin"],
+  "section": "monthly"
+},
+
+{
+  "title": "How to Top of the Chain",
+  "image": "assets/panel.jpg",
+  "category": "Special event",
+  "borderColor": "#7DA8C0",
+  "icon": "heroicons--ticket-solid.png",
+  "tags": ["career", "job", "linkedin"],
+  "section": "monthly"
+},
+
+{
+  "title": "Speed Dating with Recruiters",
+  "image": "assets/speed-date.jpg",
+  "category": "Special event",
+  "borderColor": "#7DA8C0",
+  "icon": "heroicons--ticket-solid.png",
+  "tags": ["career", "job", "linkedin"],
+  "section": "monthly"
+},
+{
+  "title": "Find your Dream Job & People",
+  "image": "assets/skill.jpg",
+  "category": "Special event",
+  "borderColor": "#7DA8C0",
+  "icon": "heroicons--ticket-solid.png",
+  "tags": ["career", "job", "linkedin"],
+  "section": "monthly"
+}
+
+]
+
+
+

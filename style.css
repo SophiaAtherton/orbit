@@ -1,0 +1,702 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #fbf8f6;
+  color: #333533;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family:'Quicksand', sans-serif;
+}
+
+.background-wrapper {
+  position: relative;           /* so child .background-image can be absolute */
+  min-height: 100vh;            /* at least viewport height */
+  padding-bottom: 40px;         /* add some bottom space so curve fully visible */
+  margin: 0 10px;               /* horizontal spacing */
+  border-radius: 20px 20px 40px 40px; /* bigger radius at bottom corners */
+  overflow: visible;            /* ensure curve not clipped */
+  background: transparent;
+
+}
+
+.background-wrapper .background-image {
+  position: absolute;
+  top: 0;                      /* start at top of wrapper */
+  left: 0;
+  right: 0;
+  bottom: 0;                   /* fill full height of wrapper */
+  border-radius: inherit;      /* same rounding as wrapper */
+  background-image: url('assets/paper-background.jpeg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+.app {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 16px;
+  margin: auto;
+}
+
+.menu-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-btn img {
+  width: 34px; 
+  height: 34px;
+  display: block;
+}
+
+.header {
+  position: relative;
+    height: 528px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+    border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  overflow: hidden;
+  padding: 16px;
+  color: white;
+  background-blend-mode: overlay;
+  background-color: rgba(75, 109, 73, 0.7);
+}
+
+.top-nav {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 45px; 
+  width: auto;
+  display: block;
+}
+
+
+.header {
+  position: relative;
+  overflow: hidden; /* ensures no scrollbars if image overflows */
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* covers the whole container */
+  z-index: 0;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 250px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Sora', sans-serif;
+  color: white;
+  text-align: center;
+
+    font-size: clamp(2.5rem, 5vw, 6rem);
+  font-weight: 700;
+  line-height: 1.2;
+  height: calc(1.2em * 2);
+  width: max-content;
+  max-width: 16ch;
+  padding: 0 24px;
+
+  white-space: pre-line;
+  overflow: hidden;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+
+
+
+.search-bar {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;               /* center horizontally */
+  transform: translateX(-50%);
+  max-width: 680px;        /* max width it can grow */
+  width: 90%;              /* adapt on smaller screens */
+  display: flex;
+  gap: 8px;
+    opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.search-bar input {
+  flex: 1;
+  font-family:'Quicksand', sans-serif;
+  color:#332E2C;
+   font-weight: 600;       /* medium weight */
+  font-size:14px;
+  min-width: 0;
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.search-bar input::placeholder {
+  color: #6F6860; /* lighter color for placeholder text */
+  font-family: 'Quicksand', sans-serif;
+}
+
+.search-bar input:focus {
+  outline: none; /* Remove default outline */
+  border:3px solid #4B6D49; /* Replace with your desired color */
+  box-shadow: 0 0 5px rgba(75, 109, 73, 0.5); /* optional glow effect */
+}
+
+.search-bar:hover,
+.search-bar:focus-within {
+  opacity: 1;
+}
+
+.filter-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: #F5F1E5;
+}
+
+
+.tabs {
+  display: flex;                 /* Arrange tabs horizontally */
+  justify-content: center;      /* Center the tabs */
+  gap: 32px;                     /* Space between each tab */
+  padding-top: 12px;             /* Add space above tabs */
+  padding-bottom: 8px;           /* Space below tabs before underline */
+  margin-top: 12px;              /* Push tabs down from hero section */
+  border-bottom: none;           /* Remove bottom border */
+}
+
+.tab {
+  background: none;              /* No background for buttons */
+  border: none;                  /* No border */
+  font-weight: 600;              /* Semi-bold text */
+  font-family: 'Sora', sans-serif; /* Use Sora font */
+  font-size: 1rem;               /* Set font size */
+  cursor: pointer;              /* Pointer cursor on hover */
+  position: relative;           /* So we can position ::after underline */
+  color: #666;                  /* Default tab text color */
+  padding: 6px 8px;              /* Some padding around the text */
+  border-bottom: none;           /* No bottom border */
+}
+
+.tab.active {
+  color: #332E2C;                /* Active tab text color */
+  font-weight: 600;              /* Reinforce semi-bold */
+  font-family: 'Sora', sans-serif; /* Reinforce font just in case */
+  border-bottom: none;           /* No bottom border for active state */
+}
+
+.tab::after {
+  content: "";                   /* Create the underline element */
+  position: absolute;           /* Absolutely position it inside the tab */
+  bottom: -1px;                  /* Position it slightly below the tab text */
+  left: 50%;                     /* Center it horizontally */
+  transform: translateX(-50%);   /* Fine-tune centering */
+  width: 100px;                  /* Width of the underline */
+  height: 6px;                   /* Height of the underline image */
+  background: url('assets/underline.png') no-repeat center center; /* Use PNG underline */
+  background-size: contain;     /* Scale the image to fit container */
+  pointer-events: none;         /* Don't let mouse interact with underline */
+
+  opacity: 0;                    /* Start invisible */
+  clip-path: inset(0 100% 0 0);  /* Start with a hidden clip */
+  transition: opacity 0.3s ease, clip-path 0.3s ease; /* Animate appearance */
+}
+
+.tab.active::after {
+  opacity: 1;                    /* Show underline on active tab */
+  clip-path: inset(0 0 0 0);     /* Reveal the underline smoothly */
+}
+
+/* Hide feeds with the .hidden class */
+.feed.hidden {
+  display: none;
+}
+.section-title {
+  margin: 24px 0 12px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600; /* or 700 if you want it bolder */
+  display: flex;
+  align-items: center;
+  gap: 4px;          /* Reduced from 8px to bring icon closer */
+  padding-left: 16px; /* match this to cards container padding */
+}
+
+/* Icon styling */
+.section-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 4px;  /* Reduced margin-right to bring it closer */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.card-scroll {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 16px;
+  padding: 0 16px 40px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 16px;
+  max-width: 100%;            /* constrain container width */
+  box-sizing: border-box;
+}
+
+/* Scrollable background behind cards */
+.card-scroll::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 110%;
+  min-height: 160px;
+  width: var(--bg-width);
+  background: url('assets/paper-card\ background.png') repeat-x;
+  background-size: auto 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+/* --- Card Container --- */
+.card {
+  background: white;                           /* white background */
+  border-radius: 12px;                         /* rounded corners */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);    /* subtle drop shadow */
+  flex: 0 0;                                  /* no grow or shrink in flexbox */
+  max-width: 100%;                            /* max width is 100% of container */
+min-width: 200px;        /* increase min-width from 160px */
+  padding: 8px 8px;      /* add left and right padding */
+  box-sizing: border-box;  /* include padding in width */
+  overflow: hidden;                           /* clip overflow content */
+  border: 1px solid #eee;                     /* light border */
+  display: flex;                              /* flex container */
+  flex-direction: column;                     /* stack children vertically */
+  height: auto;                               /* automatic height based on content */
+  
+}
+
+/* --- Card Image --- */
+.card img {
+  width: 100%;                               /* image fills card width */
+  height: 100px;                             /* fixed image height */
+  object-fit: cover;                         /* crop image to fill container */
+  flex-shrink: 0;                            /* prevent image from shrinking */
+   border-radius: 12px; /* rounded corners */
+   display:block;
+}
+
+/* --- Heart Button (favorite) --- */
+.card .heart-button {
+  position: absolute;                        /* positioned relative to card */
+  bottom: 8px;                              /* 8px from bottom */
+  right: 8px;                               /* 8px from right */
+  background: rgba(255, 255, 255, 0.9);    /* semi-transparent white bg */
+  border: none;                             /* no border */
+  border-radius: 50%;                       /* circular shape */
+  padding: 6px;                             /* padding inside button */
+  cursor: pointer;                          /* pointer cursor on hover */
+  transition: background 0.2s ease;         /* smooth bg color change */
+}
+
+/* Heart Button Hover State */
+.card .heart-button:hover {
+  background: white;                        /* full white on hover */
+}
+
+/* --- Card Content Wrapper --- */
+.card .content {
+  padding: 8px 3px 12px;                   /* padding: top sides bottom */
+  display: flex;                            /* flex container */
+  flex-direction: column;                   /* vertical stacking */
+  justify-content: space-between;          /* space between children */
+  flex: 1;                                 /* take up remaining space */
+}
+
+/* --- Card Title --- */
+.card .title {
+  font-size: 1.25rem;                         /* normal text size */
+  font-family: 'Sora', sans-serif;        /* custom font */
+  font-weight: 700;                        /* bold */
+  color: #4B6D49;                         /* greenish text color */
+  margin-bottom: 10px;                      /* space below title */
+  line-height: 1.2;                       /* tighter line height */
+  margin-top: 0;                          /* no top margin */
+}
+
+/* --- Badge (Category Label) --- */
+.card .badge {
+  display: inline-flex;                    /* inline flex container */
+  align-items: center;                    /* vertically center icon + text */
+  margin-top: 5px;                        /* small gap from above content */
+  font-size: 0.7rem;                      /* smaller text */
+  font-weight: 600;                       /* medium weight */
+  font-family:'quicksand', sans-serif; /* custom font */
+  padding: 4px 10px;                      /* vertical and horizontal padding */
+  border-radius: 999px;                   /* pill shaped */
+  border: 1px solid;                      /* border matching text color */
+  margin-bottom: 8px;                     /* spacing below badge */
+  gap: 6px;                              /* space between icon and text */
+  
+  width: max-content;                    /* only as wide as content */
+  max-width: 100%;                      /* but not wider than container */
+  box-sizing: border-box;               /* include padding and border in width */
+}
+
+/* --- Badge Icon --- */
+.card .icon {
+  width: 16px !important;                /* fixed icon width */
+  height: 16px !important;               /* fixed icon height */
+  object-fit: contain;                   /* maintain aspect ratio */
+  vertical-align: middle;                /* align vertically with text */
+  margin-right: 4px;                    /* space to the right of icon */
+  display: inline-block;                /* treat as inline block */
+}
+
+/* --- Meta Information (Date, Time, etc.) --- */
+.card .meta {
+  display: flex;                       /* horizontal flex container */
+  gap: 12px;                         /* gap between meta items */
+  font-size: 0.85rem;                /* smaller text size */
+  font-family: 'quicksand', sans-serif; /* custom font */
+  color: #332E2C;                   /* dark gray text */
+  font-weight: 500;
+  margin-top:3px;
+  align-items: center;              /* vertically center items */
+}
+
+/* Meta Text Span */
+.card .meta span {
+  display: flex;                     /* inline flex */
+  align-items: center;             /* vertically center icon + text */
+  gap: 2px;                       /* small gap between icon and text */
+}
+
+
+.view-more {
+  text-align: right;
+  margin-top: 8px;
+}
+
+.view-more button {
+  background: none;
+  border: none;
+  color: #4b6d49;
+  font-size: 0.85rem;
+}
+
+.back-top {
+  text-align: center;
+  padding: 32px 0;
+}
+
+
+.filter-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+
+.paper-note {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 1rem;
+  margin-top:1.5rem;
+}
+
+/* Ensure image always fits container */
+.paper-note .paper-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Text container */
+.paper-note .paper-content {
+  position: absolute;
+  top: 22%;
+  left: 16%;
+  right: 14%;
+  color: #332E2C;
+  font-family: 'Sora', sans-serif;
+  font-weight: 400;
+}
+
+/* Default text size for medium screens */
+.path-title {
+  font-size: clamp(1.4rem, 2.4vw, 2.4rem);
+  font-weight: 700;
+  margin-bottom: 0.1rem;
+}
+
+.path-desc {
+  font-size: clamp(1rem, 1.3vw, 1.5rem);
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #332E2C;
+}
+
+
+
+
+/* ========== Carousel Container ========== */
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 2rem; /* space from above section */
+  cursor: pointer;
+}
+
+/* ========== Carousel Header Text ========== */
+.carousel-text {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.carousel-text h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #332E2C;
+}
+
+.carousel-text .highlight {
+  color: #4B8D5B; /* Orbit green or your primary brand tone */
+}
+
+.carousel-text p {
+  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  color: #555;
+  margin-top: 0.3rem;
+}
+
+/* ========== Card Carousel Layout ========== */
+.carousel-image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 320px; /* same as your Orbit card max width */
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------- Base styles for medium screens (≥600px) -------------------- */
+@media (min-width: 600px) {
+  .card {
+    flex: 0 0 240px;        /* Wider cards at medium screen sizes */
+    max-width: 240px;
+    min-width: 240px;
+  }
+
+  .card-scroll {
+    padding: 0 40px 50px;   /* Wider horizontal padding */
+  }
+
+  .section-title {
+    padding-left: 40px;     /* Align section titles nicely with card padding */
+  }
+
+  .tabs {
+    gap: 48px;              /* Increase spacing between tabs */
+  }
+
+  .tab {
+    font-size: 1.1rem;
+    padding: 6px 10px;
+  }
+
+  .hero-text {
+    max-width: 70%;         /* Constrain hero text width for better readability */
+  }
+}
+
+/* Global section title size (applies outside media queries too) */
+.section-title {
+  font-size: 1.125rem;
+}
+
+/* -------------------- Custom scaling fix (460px–959px) -------------------- */
+@media (min-width: 460px) and (max-width: 959px) {
+  .paper-note {
+    max-width: 600px;         /* limits container width */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .paper-note .paper-image {
+    width: 100% !important;   /* force image to never exceed container */
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+  }
+
+  .paper-note .paper-content {
+    top: 26%;                 /* adjust text vertical position */
+    left: 14%;
+    right: 14%;
+  }
+
+  .path-title {
+    font-size: 2rem !important;  /* make text bigger */
+  }
+
+  .path-desc {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* -------------------- Large screens (≥960px) -------------------- */
+@media (min-width: 960px) {
+  .card {
+    flex: 0 0 30%;           /* Cards take up more of the row */
+  }
+
+  .card-scroll {
+    padding: 0 48px 60px;    /* Increase vertical and horizontal padding */
+  }
+
+  .section-title {
+    padding-left: 60px;
+  }
+
+  .tab {
+    font-size: 1.2rem;
+    padding: 8px 12px;
+  }
+
+  .app {
+    max-width: 960px;        /* Constrain overall app width */
+  }
+}
+
+/* -------------------- Small phones (≤375px) -------------------- */
+@media (max-width: 375px) {
+  .card .badge {
+    font-size: 0.6rem;
+    padding: 2px 8px;
+  }
+
+  .hero-text {
+    line-height: 1.2;
+    max-width: 90%;          /* Give hero text more room to avoid wrapping */
+  }
+}
+
+/* -------------------- Extra large screens (≥1024px) -------------------- */
+@media (min-width: 1024px) {
+  .header {
+    height: 700px;            /* Taller hero header */
+  }
+
+  .hero-text {
+    bottom: 320px;            /* Adjust hero text position */
+  }
+
+  .search-bar {
+    bottom: 140px;            /* Adjust search bar position */
+  }
+
+  .logo img {
+    height: 64px;
+  }
+
+  .menu-btn img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .tab {
+    font-size: 1.3rem;
+    padding: 10px 14px;
+  }
+
+  .tabs {
+    gap: 64px;
+  }
+
+  .card-scroll {
+    padding: 0 64px 40px;
+  }
+
+  .section-title {
+    padding-left: 64px;
+  }
+}
+
+/* -------------------- Paper note and text scaling for large screens (960px to 1625px) -------------------- */
+@media (min-width: 960px) and (max-width: 1625px) {
+  .paper-note {
+    max-width: 700px;         /* Fix container max width at 700px */
+    width: 100%;              /* Responsive width */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .paper-note .paper-image {
+    width: 100%;
+    max-width: 700px;         /* Cap image max width */
+    height: auto;
+    display: block;
+  }
+
+  .paper-note .paper-content {
+    top: 28%;                 /* Adjust vertical position */
+    left: 16%;                /* Balanced horizontal padding */
+    right: 16%;
+  }
+
+  .path-title {
+    font-size: clamp(2rem, 2vw, 2.4rem); /* Moderate fluid scaling */
+  }
+
+  .path-desc {
+    font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+  }
+}
